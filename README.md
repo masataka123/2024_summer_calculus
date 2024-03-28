@@ -71,7 +71,7 @@
 
 ガイダンス資料と授業資料をまとめました. 
 
-[ガイダンス資料+授業資料](https://masataka123.github.io/2024_summer_calculus/material/0_線形代数_2024.pdf)
+[ガイダンス資料+授業資料](https://masataka123.github.io/2024_summer_calculus/material/0_解析学_2024.pdf)
 
 以下は訂正リスト・バージョンアップの情報です. 間違いがあればこのファイルを訂正していきます. 
 
