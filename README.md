@@ -81,7 +81,7 @@
 
 - 第1回 (2024/04/11) ガイダンス  [第1回授業板書](https://masataka123.github.io/2024_summer_calculus/material/1_授業板書.pdf)
 - 第2回 (2024/04/18) [第2回授業板書](https://masataka123.github.io/2024_summer_calculus/material/2_授業板書.pdf)
-- 第3回 (2024/04/25) 
+- 第3回 (2024/04/25) [第3回授業板書](https://masataka123.github.io/2024_summer_calculus/material/3_授業板書.pdf)
 - 第4回 (2024/05/09) 
 - 第5回 (2024/05/16) 
 - 第6回 (2024/05/23) 
