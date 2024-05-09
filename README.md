@@ -74,7 +74,7 @@
 [ガイダンス資料+授業資料](https://masataka123.github.io/2024_summer_calculus/material/0_解析学_2024.pdf)
 
 以下は訂正リスト・バージョンアップの情報です. 間違いがあればこのファイルを訂正していきます. 
-
+- 2024/05/09 例53の間違いを修正しました. 
 
 # 授業の板書の画像
 授業の板書をアップロードしていきます.  対面授業なので1日に授業をどこまで進められるかわかりません. 授業の進み具合に応じて適宜休講あるいは補講をすることがあるので, こまめにホームページを確認してください. 
@@ -82,7 +82,7 @@
 - 第1回 (2024/04/11) ガイダンス  [第1回授業板書](https://masataka123.github.io/2024_summer_calculus/material/1_授業板書.pdf)
 - 第2回 (2024/04/18) [第2回授業板書](https://masataka123.github.io/2024_summer_calculus/material/2_授業板書.pdf)
 - 第3回 (2024/04/25) [第3回授業板書](https://masataka123.github.io/2024_summer_calculus/material/3_授業板書.pdf)
-- 第4回 (2024/05/09) 
+- 第4回 (2024/05/09) [第4回授業板書](https://masataka123.github.io/2024_summer_calculus/material/4_授業板書.pdf)
 - 第5回 (2024/05/16) 
 - 第6回 (2024/05/23) 
 - 第7回 (2024/05/30) 
