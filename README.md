@@ -85,7 +85,7 @@
 - 第3回 (2024/04/25) [第3回授業板書](https://masataka123.github.io/2024_summer_calculus/material/3_授業板書.pdf)
 - 第4回 (2024/05/09) [第4回授業板書](https://masataka123.github.io/2024_summer_calculus/material/4_授業板書.pdf)
 - 第5回 (2024/05/16) [第5回授業板書](https://masataka123.github.io/2024_summer_calculus/material/5_授業板書.pdf)
-- 第6回 (2024/05/23) 
+- 第6回 (2024/05/23) [第6回授業板書](https://masataka123.github.io/2024_summer_calculus/material/6_授業板書.pdf)
 - 第7回 (2024/05/30) 
 - 第8回 (2024/06/06) 演習
 - 第9回 (2024/06/13) 
