@@ -1,0 +1,191 @@
+\documentclass[dvipdfmx,a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[dvipdfmx]{hyperref} %リンクを有効にする
+\usepackage{url} %同上
+\usepackage{amsmath,amssymb} %もちろん
+\usepackage{amsfonts,amsthm,mathtools} %もちろん
+\usepackage{braket,physics} %あると便利なやつ
+\usepackage{bm} %ラプラシアンで使った
+\usepackage[top=15truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry} %余白設定
+\usepackage{latexsym} %ごくたまに必要になる
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usepackage{otf} %宗教上の理由でmin10が嫌いなので
+\usepackage{showkeys}\renewcommand*{\showkeyslabelformat}[1]{\fbox{\parbox{2cm}{ \normalfont\tiny\sffamily#1\vspace{6mm}}}}
+\usepackage[driverfallback=dvipdfm]{hyperref}
+
+
+\usepackage[all]{xy}
+\usepackage{amsthm,amsmath,amssymb,comment}
+\usepackage{amsmath}    % \UTF{00E6}\UTF{0095}°\UTF{00E5}\UTF{00AD}\UTF{00A6}\UTF{00E7}\UTF{0094}¨
+\usepackage{amssymb}  
+\usepackage{color}
+\usepackage{amscd}
+\usepackage{amsthm}  
+\usepackage{wrapfig}
+\usepackage{comment}	
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{pxrubrica}
+\usepackage{enumitem}
+\usepackage{mathrsfs} 
+
+\setstretch{1.2}
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Sin}{\text{Sin}^{-1}} 
+\newcommand{\Cos}{\text{Cos}^{-1}} 
+\newcommand{\Tan}{\text{Tan}^{-1}} 
+\newcommand{\invsin}{\text{Sin}^{-1}} 
+\newcommand{\invcos}{\text{Cos}^{-1}} 
+\newcommand{\invtan}{\text{Tan}^{-1}} 
+\newcommand{\Area}{\text{Area}}
+\newcommand{\vol}{\text{Vol}}
+\newcommand{\maru}[1]{\raise0.2ex\hbox{\textcircled{\tiny{#1}}}}
+\newcommand{\sgn}{{\rm sgn}}
+%\newcommand{\rank}{{\rm rank}}
+
+
+
+   %当然のようにやる．
+\allowdisplaybreaks[4]
+   %もちろん．
+%\title{第1回. 多変数の連続写像 (岩井雅崇, 2020/10/06)}
+%\author{岩井雅崇}
+%\date{2020/10/06}
+%ここまで今回の記事関係ない
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins, theorems}
+
+\theoremstyle{definition}
+\newtheorem{thm}{定理}
+\newtheorem{lem}[thm]{補題}
+\newtheorem{prop}[thm]{命題}
+\newtheorem{cor}[thm]{系}
+\newtheorem{claim}[thm]{主張}
+\newtheorem{dfn}[thm]{定義}
+\newtheorem{rem}[thm]{注意}
+\newtheorem{exa}[thm]{例}
+\newtheorem{conj}[thm]{予想}
+\newtheorem{prob}[thm]{問題}
+\newtheorem{rema}[thm]{補足}
+
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Vol}{Vol}
+ \newcommand{\pdrv}[2]{\frac{\partial #1}{\partial #2}}
+ \newcommand{\drv}[2]{\frac{d #1}{d#2}}
+  \newcommand{\ppdrv}[3]{\frac{\partial #1}{\partial #2 \partial #3}}
+
+
+%ここから本文．
+\begin{document}
+\pagestyle{empty}
+
+
+
+\begin{center}
+{\Large 演習問題 2024年6月6日(木)} \\
+
+%\vspace{5pt}
+%{ \large 提出締め切り 2024年月日(火) 15時10分00秒 (日本標準時刻)}
+\end{center}
+
+%\vspace{2pt}
+%\begin{flushleft}
+%{ \large \underline{学籍番号: \hspace{4cm} 名前  \hspace{8cm} } }
+%\end{flushleft}
+
+\begin{center}
+ {\large 下の問題を解け. なお解答は配布した解答用紙に解答すること.}
+  \end{center}
+ ただし解答に関しては答えのみならず, 答えを導出する過程をきちんと記すこと. 
+ また解答用紙は1人1枚以上提出すること.
+  
+  \vspace{11pt}
+ 問題1.  次の極限の値を求めよ.
+ 
+ \begin{enumerate}
+   \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+ \item $\lim_{n \to \infty } \frac{n}{n^2 +1}$
+ \item $\lim_{n \to \infty } \sum_{k=1}^{n} \frac{1}{5^k}$
+ \item $\lim_{n \to \infty} \left(1 - \frac{1}{n}\right)^n$
+ \end{enumerate}
+ 
+\vspace{5pt}
+ 問題2. 次の関数の微分を求めよ.
+
+\begin{enumerate}
+   \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+    \item $\frac{x}{x^2 +1}$ 
+    
+    \item $ \sqrt{x^2 + 1}$
+    
+    \item $  \log (2x^2 + 3x)$ 
+\end{enumerate}
+ 
+ \vspace{5pt}
+ 問題3. 次の問いに答えよ.
+
+\begin{enumerate}
+   \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+    \item 関数 $f(x) = x^3 - 6x^2 + 9x + 1$ のグラフをかけ. また極大値と極小値を求めよ.
+    
+    \item 関数 $g(x) = e^{-x^2}$ のグラフをかけ. また最大値を求めよ.
+    
+\end{enumerate}
+ 
+ 問題4. 関数$f(x) = \log(1 +x)$とする. 次の問いに答えよ.
+ 
+ \begin{enumerate}
+    \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+    \item 1階導関数$f'(x)$, 2階導関数$f^{(2)}(x)$, 3階導関数$f^{(3)}(x)$をそれぞれ求めよ.
+    \item $n$階導関数$f^{(n)}(x)$を求めよ.
+    \item 冪級数展開の公式$f(x) = \sum_{n=0}^{\infty}\frac{f^{n}(0)}{n!} x^{n}$であることを用いて$\log(1+x)$を冪級数展開せよ. 
+\end{enumerate}
+
+
+ 問題5. 次の問題は2024年度の阪大理系の問題である.\footnote{ただし一部ヒントを入れて簡単にした.} 1以上の整数$n$について関数$f_{n}(x)$を
+ $$
+ f_n(x) = 1 - \frac{1}{2}e^{nx} +  \cos \frac{x}{3} \quad (x \geqq 0)
+ $$
+ で定める. 次の問いに答えよ. 
+ \begin{enumerate}
+   \setlength{\parskip}{0cm} % 段落間
+  \setlength{\itemsep}{0cm} % 項目間
+\item $f_{n}(x)$は単調減少関数であることを示せ. 
+\item %$f_{n}(0)$と$\lim_{x\to +\infty} f_{n}(x)$を求めよ. また
+$y=f_{n}(x)$のグラフをかくことにより
+$f_{n}(x)=0$は$(0,+\infty)$上にただ一つの実数解を持つことをしめせ．
+\item 2.における実数解を$a_{n}$とする. $e^{na_n} = 2 (1 + \cos \frac{a_n}{3})$であることに注意して次の不等式を示せ.
+$$
+0 \leqq a_n \leqq \frac{\log 4}{n}.
+$$
+\item $\lim_{n \to \infty} a_n$と$\lim_{n \to \infty} na_n$をそれぞれ求めよ.
+\end{enumerate}
+ 
+ \newpage
+ 
+  \begin{center}
+ {\Large 解答用紙}
+% {\Large 演習問題の解答用紙 2024年1月11日(木) } \\
+\end{center}
+
+%\vspace{5pt}
+%{ \large 提出締め切り 2024年月日(火) 15時10分00秒 (日本標準時刻)}
+%\end{center}
+
+%\vspace{2pt}
+\begin{flushleft}
+{ \large \underline{学籍番号: \hspace{4cm} 名前  \hspace{9cm}   }  }
+\end{flushleft}
+ 
+
+ \end{document}
