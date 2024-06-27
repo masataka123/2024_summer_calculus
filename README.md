@@ -90,11 +90,11 @@
 - 第8回 (2024/06/06) 演習 [第1回演習問題](https://masataka123.github.io/2024_summer_calculus/material/0_演習問題解析_1_20240606.pdf) [第1回演習解答](https://masataka123.github.io/2024_summer_calculus/material/0_演習問題解析_1_20240606_解答.pdf)
 - 第9回 (2024/06/13)  [第8回授業板書](https://masataka123.github.io/2024_summer_calculus/material/8_授業板書.pdf)
 - 第10回 (2024/06/20) [第9回授業板書](https://masataka123.github.io/2024_summer_calculus/material/9_授業板書.pdf)
-- 第11回 (2024/06/27) 
-- 第12回 (2024/07/04) 
+- 第11回 (2024/06/27) [第10回授業板書](https://masataka123.github.io/2024_summer_calculus/material/10_授業板書.pdf)
+-  (2024/07/04) 休講
 -  (2024/07/11) 休講
-- 第13回 (2024/07/18) 演習
-- 第14回 (2024/07/25) 期末試験
+- 第12回 (2024/07/18) 演習
+-  (2024/07/25) 期末試験
 
 
 <!--
