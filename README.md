@@ -93,7 +93,7 @@
 - 第11回 (2024/06/27) [第10回授業板書](https://masataka123.github.io/2024_summer_calculus/material/10_授業板書.pdf)
 -  (2024/07/04) 休講
 -  (2024/07/11) 休講
-- 第12回 (2024/07/18) 演習
+- 第12回 (2024/07/18) 演習 [第2回演習問題](https://masataka123.github.io/2024_summer_calculus/material/0_演習問題解析_2_20240718.pdf) [第2回演習解答](https://masataka123.github.io/2024_summer_calculus/material/0_演習問題解析_2_20240718_解答.pdf)
 -  (2024/07/25) 期末試験
 
 
