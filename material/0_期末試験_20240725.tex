@@ -1,0 +1,225 @@
+\documentclass[dvipdfmx,a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[dvipdfmx]{hyperref} %リンクを有効にする
+\usepackage{url} %同上
+\usepackage{amsmath,amssymb} %もちろん
+\usepackage{amsfonts,amsthm,mathtools} %もちろん
+\usepackage{braket,physics} %あると便利なやつ
+\usepackage{bm} %ラプラシアンで使った
+\usepackage[top=20truemm,bottom=30truemm,left=25truemm,right=25truemm]{geometry} %余白設定
+\usepackage{latexsym} %ごくたまに必要になる
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+\usepackage{otf} %宗教上の理由でmin10が嫌いなので
+\usepackage{showkeys}\renewcommand*{\showkeyslabelformat}[1]{\fbox{\parbox{2cm}{ \normalfont\tiny\sffamily#1\vspace{6mm}}}}
+\usepackage[driverfallback=dvipdfm]{hyperref}
+
+\usepackage[all]{xy}
+\usepackage{amsthm,amsmath,amssymb,comment}
+\usepackage{amsmath}    % \UTF{00E6}\UTF{0095}°\UTF{00E5}\UTF{00AD}\UTF{00A6}\UTF{00E7}\UTF{0094}¨
+\usepackage{amssymb}  
+\usepackage{color}
+\usepackage{amscd}
+\usepackage{amsthm}  
+\usepackage{wrapfig}
+\usepackage{comment}	
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{pxrubrica}
+\usepackage{enumitem}
+\usepackage{mathrsfs} 
+
+
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}} 
+\newcommand{\Sin}{\text{Sin}^{-1}} 
+\newcommand{\Cos}{\text{Cos}^{-1}} 
+\newcommand{\Tan}{\text{Tan}^{-1}} 
+\newcommand{\invsin}{\text{Sin}^{-1}} 
+\newcommand{\invcos}{\text{Cos}^{-1}} 
+\newcommand{\invtan}{\text{Tan}^{-1}} 
+\newcommand{\Area}{\text{Area}}
+\newcommand{\vol}{\text{Vol}}
+\newcommand{\maru}[1]{\raise0.2ex\hbox{\textcircled{\tiny{#1}}}}
+\newcommand{\sgn}{{\rm sgn}}
+%\newcommand{\rank}{{\rm rank}}
+
+
+
+   %当然のようにやる．
+\allowdisplaybreaks[4]
+   %もちろん．
+%\title{第1回. 多変数の連続写像 (岩井雅崇, 2020/10/06)}
+%\author{岩井雅崇}
+%\date{2020/10/06}
+%ここまで今回の記事関係ない
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins, theorems}
+
+\theoremstyle{definition}
+\newtheorem{thm}{定理}
+\newtheorem{lem}[thm]{補題}
+\newtheorem{prop}[thm]{命題}
+\newtheorem{cor}[thm]{系}
+\newtheorem{claim}[thm]{主張}
+\newtheorem{dfn}[thm]{定義}
+\newtheorem{rem}[thm]{注意}
+\newtheorem{exa}[thm]{例}
+\newtheorem{conj}[thm]{予想}
+\newtheorem{prob}[thm]{問題}
+\newtheorem{rema}[thm]{補足}
+
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Vol}{Vol}
+ \newcommand{\pdrv}[2]{\frac{\partial #1}{\partial #2}}
+ \newcommand{\drv}[2]{\frac{d #1}{d#2}}
+  \newcommand{\ppdrv}[3]{\frac{\partial #1}{\partial #2 \partial #3}}
+
+
+%ここから本文．
+\begin{document}
+\pagestyle{empty}
+
+
+
+\begin{center}
+{\LARGE 期末試験} \\
+
+{2024年度春夏学期 大阪大学 全学共通教育科目 解析学入門 経（161〜）}
+\end{center}
+
+\begin{flushright}
+ 岩井雅崇(いわいまさたか) 2024/07/25
+\end{flushright}
+
+
+%\vspace{2pt}
+%\begin{flushleft}
+%{ \large \underline{学籍番号: \hspace{4cm} 名前  \hspace{8cm} } }
+%\end{flushleft}
+
+%\begin{center}
+ %{\large 下の問題を解け. なお解答は配布した解答用紙に解答すること. }
+ %{\large 各問題の下に答えを書きこの用紙を提出してください. 問題は両面あります.}
+  %\end{center}
+  
+  \begin{center}
+下の問題を解け.  ただし解答に関しては答えのみならず, 答えを導出する過程をきちんと記すこと. 
+
+また$e$をネイピア数とし$\pi$を円周率とする.
+  \end{center}
+  
+  \vspace{11pt}
+{\Large 第1問.} 
+\vspace{11pt}
+関数$f(x)$を
+$$f(x) = \frac{e^{x} - e^{-x}}{2}$$
+とおく. 次の問いに答えよ.
+ 
+ \begin{enumerate}
+ %   \setlength{\parskip}{0cm} % 段落間
+ % \setlength{\itemsep}{0cm} % 項目間
+    \item 1階導関数$f'(x)$, 2階導関数$f^{(2)}(x)$, 3階導関数$f^{(3)}(x)$をそれぞれ求めよ.
+    \item $n$階導関数$f^{(n)}(x)$を求めよ.
+    \item マクローリン展開(べき級数展開・テイラー展開)の公式$f(x) = \sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!} x^{n}$を用いて$f(x)=\frac{e^{x} - e^{-x}}{2}$をマクローリン展開せよ. 
+\end{enumerate}
+
+
+   \vspace{14pt}
+{\Large 第2問.} 
+$\R^2$上の$C^\infty$級関数を
+$$f(x,y) = x^3+6x^2+3y^2-12xy+9x$$
+とする.
+$f(x,y) $について極大点・極小点を持つ点があれば, その座標と極値を求めよ. またその極値が極大値か極小値のどちらであるか示せ.
+  
+  
+ \vspace{14pt}
+{\Large 第3問.} 
+$$f(x,y) = x^2y, \quad g(x,y) = x^2+2y^2-6$$とする.
+$g(x,y) =0$のもとでの$f(x,y)$の最大値と最大値をとる点の座標, 最小値と最小値をとる点の座標を全て求めよ. 
+
+ \vspace{4pt}
+つまり$S = \{ (x,y) \in \R^2: g(x,y)=0\}$とするとき, $f$の$S$上での最大値と最大値をとる点の座標, 最小値と最小値をとる点の座標を全て求めよ. ただし$S$上で$f(x,y)$が最大値・最小値をとることは認めて良い.
+ 
+  \vspace{14pt}
+{\Large 第4問.} 
+
+ $$
+\begin{array}{cccc}
+f: &(0, +\infty)& \rightarrow & \R  \\
+&x& \longmapsto & \frac{\log x}{x}
+\end{array}
+$$
+とおく.  次の問いに答えよ.
+  \begin{enumerate}
+  %  \setlength{\parskip}{0cm} 
+ %\setlength{\itemsep}{0cm}  
+ \item 関数 $f(x) $ のグラフをかけ. また最大値を求めよ.　
+ \item 定積分 $\int_{1}^{e} f(x) dx$を求めよ. (ヒント: 部分積分法)
+ \item $e^\pi$と$\pi^e$はどちらが大きいか? 理由とともに答えよ. ただし必要ならば$2<e<\pi$であることを用いて良い. 
+ \end{enumerate}
+
+ 
+
+
+ 
+
+\begin{flushright}
+\LARGE{第5問に続く}
+\end{flushright}
+
+\newpage 
+
+{\Large 第5問}  次の問題は2005年東京大学理系第3問の問題である. (ただし解きやすいように改題した.)
+$$
+f(x) = \frac{x}{2}\left( 1 + e^{-2(x-1)}\right)
+$$ 
+とおく.  また数列$\{ \alpha_{n}\}_{n=1}^{\infty}$を
+$$
+\alpha_1 =\frac{3}{4}, \quad  \alpha_{n+1} = f(\alpha_{n}) \quad (n=1,2,3,\ldots)
+$$
+として定める. 次の問いに答えよ. 
+\begin{enumerate}
+ \item $f'(x)$のグラフを書け. また$f'(x)$の最小値を求めよ. 
+ \item $\frac{1}{2} < x < 1$ならば$0 < f' (x) < \frac{1}{2}$であることを示せ.
+ \item $\frac{1}{2} < x < 1$ならば$\frac{1}{2} < f(x) < 1$であることを示せ. 
+\item  $n=1,2,3,\ldots$について
+$$
+| \alpha_{n+1} - 1| <\frac{1}{2}|\alpha_n -1|
+$$
+であることを示せ.
+\item $\lim_{n \to +\infty} \alpha_n$を求めよ.
+\end{enumerate}
+
+ただし解答に際し, 次の定理(平均値の定理)を用いて良い.
+
+\begin{tcolorbox}[
+    colback = white,
+    colframe = black,
+    fonttitle = \bfseries,
+    breakable = true]
+ [定理] $f(x)$を$[a,b]$上で連続, $(a,b)$上で微分可能な関数とする.
+このとき
+$$
+f'(c) = \frac{f(b)-f(a)}{b-a}
+$$
+となる$c \in (a,b)$が存在する. 
+\end{tcolorbox}
+
+ 
+  \vspace{11pt}
+  {\Large おまけ問題}  
+  \begin{enumerate}
+ \item 1枚のパンケーキを1回の包丁のカットで重さを2等分にできることを示せ. ただしパンケーキは円形とは限らないとする. 
+  \item 地球上には常に, ある赤道上の地点$x$とその真裏の地点$y$で, 地点$x$と地点$y$の気温が同じ値になっている組$(x,y)$が存在することを示せ. ただし地球は球体であると仮定して良い.
+  \end{enumerate}
+
+
+\begin{flushright}
+\LARGE{問題は以上である. }
+\end{flushright}
+ \end{document}
+ 
